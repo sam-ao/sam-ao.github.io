@@ -31,6 +31,12 @@ a:focus {
     letter-spacing: 10px;
 }
 
+.sources-link {
+	position: absolute;
+	right: 0px;
+	font-size: 30px;
+	letter-spacing: 0px;
+}
 .menu-bar {
 	height: 70px;
 }
@@ -135,18 +141,32 @@ span.description-text {
 .awardstable-box {
 	right: 0px;
 	position: absolute;
-    top: 50%;
+    top: 60%;
     width: 60%;
     background: rgba(1,1,1,0.7);
-    padding: 30px;
 }
 .awardstable-box table {
-	width:100%;
 	border-collapse: collapse;
+	width:100%;
 	float: right
 }
-.awardstable-box table tr th,td{
-	border: 1px solid #fff;
+.awardstable-box table tr {
+	text-align: center;
+	color: #fff;
+	font-size: 25px;
+}
+
+tr:nth-child(even) {
+	background: rgba(30,30,30,0.7);
+}
+
+td ,th {
+	padding:10px;
+}
+
+ul {
+	list-style-type: none;
+	text-align: center;
 	color: #fff;
 	font-size: 25px;
 }
