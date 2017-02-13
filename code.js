@@ -282,9 +282,11 @@ function sortFrequencySortedArrayAlphabetically(frequencySortedArray) {
             similarFrequencyArray = [];
         }
     }
-    if(frequencySortedArray[i].count == arrayOfSimilarFrequencyArrays[arrayOfSimilarFrequencyArrays.length-1][0].count) {
+    similarFrequencyArray.sort(compareWords);
+    arrayOfSimilarFrequencyArrays.push(similarFrequencyArray);
+    if(frequencySortedArray[i].count == arrayOfSimilarFrequencyArrays[arrayOfSimilarFrequencyArrays.length-1].count) {
         arrayOfSimilarFrequencyArrays[arrayOfSimilarFrequencyArrays.length-1].push(frequencySortedArray[i]);
-        arrayOfSimilarFrequencyArrays[arrayOfSimilarFrequencyArrays.length-1].sort();
+        arrayOfSimilarFrequencyArrays[arrayOfSimilarFrequencyArrays.length-1].sort(compareWords);
     }
     else {
         arrayOfSimilarFrequencyArrays.push(frequencySortedArray[i]);
@@ -298,8 +300,8 @@ function sortFrequencySortedArrayAlphabetically(frequencySortedArray) {
 function findMostFrequentWords(txt) {
     var wordArray = makeWordsArray(txt);
     var arrayOfWordsWithFrequencies = findWordFrequencies(wordArray);
-    arrayOfWordsWithFrequencies.sort(compareCount);
-    var alphabetizedArray = sortFrequencySortedArrayAlphabetically(arrayOfWordsWithFrequencies);
+    var arrayOfWordsWithFrequenciesSortedByCount = arrayOfWordsWithFrequencies.sort(compareCount);
+    var alphabetizedArray = sortFrequencySortedArrayAlphabetically(arrayOfWordsWithFrequenciesSortedByCount);
     var stringArray = [];
     for(i = 0;i < alphabetizedArray.length;i++) {
         var string = alphabetizedArray[i].word+"("+alphabetizedArray[i].count+")";
