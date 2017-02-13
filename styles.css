@@ -1,172 +1,68 @@
-body,header,html {
-    background-color: #111;
-   	position: relative;
-}
-a {
-	text-decoration: none;
-	color: #fff;
-}
-a:visited {
-	text-decoration: none;
-	color: #fff;
-}
-a:hover {
-	text-decoration: none;
-	color: #fff;
-}
-a:active {
-	text-decoration: none;
-	color: #fff;
+body {
+    font-family: arial, serif;
 }
 
-a:focus {
-	text-decoration: none;
-	color: #fff;
-}
-.banner {
-	color: #fff;
-    font-size: 100px;
-    letter-spacing: 5px;
-    text-align: center;
-    letter-spacing: 10px;
-}
-
-.sources-link {
-	position: absolute;
-	right: 0px;
-	font-size: 30px;
-	letter-spacing: 0px;
-}
-.menu-bar {
-	height: 70px;
+.header {
+    background: #333;
+    color: white;
+    font-size: 12pt;
+    padding: 10px;
+    xtext-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-variant: small-caps;
 }
 
-.active-menu-item {
-	background-color: #333;
-	float:left;
-	width: 33.33%;
-	height: 55px;
-	position: relative;
-	letter-spacing: 5px;
-	text-align: center;
-	font-size: 30px;
-	padding-top:15px;
+button {
+    background: #238888;
+    padding: 5px;
+    border: 1px solid black;
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-variant: small-caps;
+    cursor: pointer;
+    align-self: flex-end;
+    margin-left: 5px;
 }
 
-.menu-item {
-	background-color: #111;
-	float:left;
-	width: 33.33%;
-	height: 55px;
-	position: relative;
-	letter-spacing: 5px;
-	text-align: center;
-	font-size: 30px;
-	padding-top:15px;
+button:hover {
+    background-color: #9b2f36;
+    color: yellow;
 }
 
-.content {
-	padding-right:5%;
-	padding-left:5%;
-}
-.upBanner { 
-    background-image: url("resources/up-1.jpg");
-    height: 800px; 
-
-    position: relative;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.upContent {
-    background-image: url("resources/up-2.jpg");
-    height: 1080px;
-}
-.theincrediblesBanner { 
-    background-image: url("resources/theincredibles-1.jpg");
-    height: 800px; 
-
-    position: relative;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.theincrediblesContent {
-    background-image: url("resources/theincredibles-1.jpg");
-    height: 1080px;
-}
-.walleBanner { 
-    background-image: url("resources/walle-1.jpg");
-    height: 800px; 
-
-    position: relative;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.walleContent {
-    background-image: url("resources/walle-1.jpg");
-    height: 1080px;
-}
-.caption {
-	text-align: center;
-	position: absolute;
-    top: 85%;
-    width: 50%;
-
-    opacity: 0.8;
-    background-color: #111;
-    color: #fff;
-
-    padding: 25px;
-    font-size: 55px;
-    letter-spacing: 5px;
+#button-submit {
+    align-self: flex-start;
 }
 
-.description-box {
-	position: absolute;
-    top: 25%;
-    width: 60%;
-    background: rgba(1,1,1,0.7);
-    padding: 30px;
-}
-span.description-text {
-	color: #fff;
-	font-size: 25px;
-	letter-spacing: 2px;
-}
-.awardstable-box {
-	right: 0px;
-	position: absolute;
-    top: 60%;
-    width: 60%;
-    background: rgba(1,1,1,0.7);
-}
-.awardstable-box table {
-	border-collapse: collapse;
-	width:100%;
-	float: right
-}
-.awardstable-box table tr {
-	text-align: center;
-	color: #fff;
-	font-size: 25px;
+.buttons {
+    align-self: stretch;
+    display: flex;
+    flex-flow: row wrap;
 }
 
-tr:nth-child(even) {
-	background: rgba(30,30,30,0.7);
+.hspacer {
+    flex: 1;
 }
 
-td ,th {
-	padding:10px;
+#txtarea {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 10em;
+    background-color: #faf6de;
 }
 
-ul {
-	list-style-type: none;
-	text-align: center;
-	color: #fff;
-	font-size: 25px;
+#form {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+}
+
+#results {
+    background: burlywood;
+    padding: 5px;
+    margin: 0px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
